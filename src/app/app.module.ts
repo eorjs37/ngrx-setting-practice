@@ -11,11 +11,16 @@ import { userInfoReducer } from "@store/userInfo/userInfo.reducers"
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { NgrxInfoComponent } from './pages/ngrx-info/ngrx-info.component';
 
+//bootstrap
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PagingComponent } from './pages/paging/paging.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NgrxInfoComponent
+    NgrxInfoComponent,
+    PagingComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +28,8 @@ import { NgrxInfoComponent } from './pages/ngrx-info/ngrx-info.component';
     //dev-tools
     StoreDevtoolsModule.instrument({
       maxAge:25
-    })
+    }),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
